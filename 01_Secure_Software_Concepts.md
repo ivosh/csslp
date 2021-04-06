@@ -158,3 +158,65 @@ Log Data Collection:
 - Aggregation (Security Information and Event Management Systems - SIEM)
 
 Runtime.
+
+
+## Secure Software Architecture Design
+Planning, Forecasting, Flexible, Practical. Design for change.
+
+Risk-based approach. Systems will be attacked: intentionally, accidentally. 
+
+Capacity - volume of users, transactions => requirements on memory, storage, CPU, network bandwidth, power.
+
+Integration with legacy systems and data. Upstream and downstream connections. Network resiliance - speed, encryption.
+
+### Project Management
+Scope/deliverables x Time/schedule x Budget/cost. (Scope creep).
+
+### Defense in Depth
+Layered defense. For example: input validation at various processing points, access permission checks at various points.
+Security controls are in serial, not in parallel.
+Variety of controls: managerial/administrative, logical/technical, physical/environmental.
+
+#### Input Validation
+* Client side (can be easily bypassed).
+* Server side.
+* Database.
+* Allowable characters, range, buffer overflows, incomplete fields, referential integrity.
+
+#### Transaction Controls
+Limit checks, reasonableness checks (anti-fraud).
+
+#### Protection
+Software: APIs, Drivers, Utilities (compilers), Operating Systems.
+Hardware, network, database, virtual machines.
+
+#### Security Zones
+Physical security (development vs operations, constrained user interface).
+Logical security (separation of environments, virtual machines, menus).
+
+Third party services - dependency on cloud, out-sourced development, out-sourced security monitoring. Boundaries.
+Contract - no assumed expectations. Service Level Agreements (SLAs). Audit, review, attestation. Liaison (point of contact).
+
+#### Diversity of Defense
+Geographic diversity. Distributed computing. Supply chain diversity (technology).
+
+Technical implications - multiple vendors (compatibility, support, training, flexibility).
+
+Legal implications - data and processing locations, response time, uptime, compliance (audit).
+
+Reputational damage - reliability, performance (capacity, response time).
+
+### Resilience
+The ability to adapt to difficult situations.
+Reliable within operational risk. Real-world environment, user experience level, failures, future functionality, new technology.
+
+* Isolation - isolate failures, reduce dependencies (loose coupling, high cohesivity)
+* Redundancy - discover Single Points of failure (SPOF), failover, fault tolerant, vendor diversity (?! different trade-offs), personnel
+
+#### Fail Secure
+Determine based on risk:
+* Fail hard - prevent failure from spreading, prevent compromise
+* Fail soft 
+* Fail safe
+
+### Leverage Existing Components
