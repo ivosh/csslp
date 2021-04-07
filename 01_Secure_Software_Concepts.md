@@ -163,7 +163,8 @@ Runtime.
 ## Secure Software Architecture Design
 Planning, Forecasting, Flexible, Practical. Design for change.
 
-Risk-based approach. Systems will be attacked: intentionally, accidentally. 
+Risk-based approach. Systems will be attacked: intentionally, accidentally. Finding the right balance between business and operational requirements, cost and security needs.
+Leveraging existing investment saves money but can reduce defense in depth.
 
 Capacity - volume of users, transactions => requirements on memory, storage, CPU, network bandwidth, power.
 
@@ -220,3 +221,39 @@ Determine based on risk:
 * Fail safe
 
 ### Leverage Existing Components
+Common controls (vs. System specific controls):
+- Allocation of all security requirements
+- Creation of the security plan (used for testing, audit and system authorization)
+
+Examples:
+- Access Control (SSO, password vaults)
+- Network
+- Power
+- Physical Security
+- Staff (development teams, operations, security - managed security/SOC)
+- Cloud
+  -- Reduce capital investment ("cloud bursting")
+  -- Gain access to skilled personnel
+  -- Collaborative development environment
+- Common libraries
+  -- Trusted Modules
+  -- APIs
+  -- Database and hard drive encryption (vs. application-specific encryption)
+
+### Economy of Mechanism
+Simple is better than complex (easier to support and test).
+
+### Memory Challenges
+- Reuse of shared/portable memory (disclosure of sensitive data, corruption of process)
+- Initialization
+- Memory Leakage
+- Secure deletion/destruction
+
+### Open Design
+Cryptographic algorithms - Kerkhoff's Principle (keep secret the key, not algorithm).
+Open source software (have sufficiently many eyeballs reviewed?).
+
+### Least Common Mechanism
+- Opposite of "component reuse". Supports defense in depth and resilience.
+- Isolation (a failure in one component does not bring down the whole system). Security zones (external and internal, whitelisting, physical and logical).
+- Compartmentalization (a compromised system is not used as a launching pad to comprimise other systems). Sandboxes, VMs.
