@@ -257,3 +257,26 @@ Open source software (have sufficiently many eyeballs reviewed?).
 - Opposite of "component reuse". Supports defense in depth and resilience.
 - Isolation (a failure in one component does not bring down the whole system). Security zones (external and internal, whitelisting, physical and logical).
 - Compartmentalization (a compromised system is not used as a launching pad to comprimise other systems). Sandboxes, VMs.
+
+### Complete Mediation
+Proxy.
+
+### Session Management
+Properly manage Cookies and Cache. OWASP #2.
+
+Use MFA, enforce good password rules, disable default credentials, harden password reset, block account enumeration.
+Limit or increasingly delay failed login attempts. Generate new random session ID on server at login.
+Do not put session IDs in the URL. Invalidate session IDs after logout. Idle and absolute timeouts.
+
+### Psychological Acceptability of Security
+- Ease of use, understandable benefit. Security should be transparent.
+- Reasonable password rules (passphrase, change frequency).
+- CAPTCHA = Completely Automated Public Turing test to tell Computers and Humans Apart
+- Screen layouts. Ease of data entry and reading. Experiment - beta testers.
+
+#### Biometric Authentication
+User concerns:
+- How private is my biometric data with that company?
+- Intrusive (fingerprint reader, iris scanner...)
+- Cleanliness of the readers
+- Authentication time and error rate: False Reject Rate (FRR) vs. False Acceptance Rate (FAR). Crossover error rate (CER) when FRR=FAR.
