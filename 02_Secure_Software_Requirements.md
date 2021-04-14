@@ -41,7 +41,7 @@ Methods:
 - Documentation review
 - Standards (such as PCI-DSS)
 
-CIA - _Confidentiality_ (privacy, safety). _Integrity_ (accuracy). _Availability_ (uptime, response time).
+CIA - _Confidentiality_ (privacy, safety), _Integrity_ (accuracy), _Availability_ (uptime, response time).
 
 Document Requirements:
 - Requirements Traceability Matrix (RTM)
@@ -66,12 +66,37 @@ User perspective - interfaces, ease of use, good screen layouts, transparent sec
 
 Use cases and mis-use cases.
 
+Compliance Requirements:
+- Legal - Privacy, Secrecy (IPR), Uptime, Accuracy. Issues - location of data storage, processing, backup; data ownership.
+- Regulatory - rules by agencies (NERC = North American Electric Reliability Corporation, food...)
+- Industry standards
+  -- payments (PCI-DSS = Payment Card Industry - Data Security Standard, PA-DSS = Payment Application - Data Security Standard)
+  -- security (OWASP - Open Web Application Security Project)
+  -- safety - Industrial Control Systems (ICS), Real-time systems (automobiles), Supervisory Control and Data Acquisition (SCADA)
+
 #### Non-functional requirements.
 Error handling. Audit and compliance. (Security). Reporting.
+Configuration (environment, deployment). Infrastructure. Capacity (network, storage, CPU). Physical Security (FIPS 140-2).
 
+Systemic Qualities of the system:
+- Agility - cryptographic algorithms, elasticity, portability, testability, usability/understandability
+- Reliability - response time
+- Availability
+- Serviceability/Maintainability
+- Installability
+- Useability
 
+Database Qualities:
+- Reliability
+- Availability
+- Scalability
+- Recoverability
+- ACID = Atomicity, Consistency, Isolation, Durability
 
-
+Security Requirements:
+- Access control levels
+- Encryption (masking, obfuscation)
+- Logs - storage, retention, compliance - support certificatio and audits
 
 ## Data Classification Requirements
 
