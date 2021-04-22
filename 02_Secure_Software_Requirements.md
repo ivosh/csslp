@@ -67,7 +67,7 @@ User perspective - interfaces, ease of use, good screen layouts, transparent sec
 Use cases and mis-use cases.
 
 Compliance Requirements:
-- Legal - Privacy, Secrecy (IPR), Uptime, Accuracy. Issues - location of data storage, processing, backup; data ownership.
+- Legal - Privacy, Secrecy (IP), Uptime, Accuracy. Issues - location of data storage, processing, backup; data ownership.
 - Regulatory - rules by agencies (NERC = North American Electric Reliability Corporation, food...)
 - Industry standards
   -- payments (PCI-DSS = Payment Card Industry - Data Security Standard, PA-DSS = Payment Application - Data Security Standard)
@@ -96,8 +96,76 @@ Database Qualities:
 Security Requirements:
 - Access control levels
 - Encryption (masking, obfuscation)
-- Logs - storage, retention, compliance - support certificatio and audits
+- Logs - storage, retention, compliance - support certification and audits
 
 ## Data Classification Requirements
+Data must be protected according to risk, legal requirements and business needs.
+
+Risk based classification:
+- Sensitive data
+- Critical data
+
+Types of data:
+- Structured
+- Unstructured
+
+Data classification requirements:
+- Legal requirements
+- Business needs: Operations (criticality, backups, proximity, bandwidth, response time, storage type)
+
+### Data Recovery
+Disaster Recovery Planning - recovery of IT services after a major outage.
+Recovery Point Objective (RPO) - what amount of data we can afford to loose. Drives the type and amount of backups.
+Recovery Time Objective (RTO) - how long it takes to restore IT services.
+
+### Data Protection
+Randomization, Tokenization, Masking, Encryption.
+
+Data Labeling - based on sensitivity, retention, ownership; electronic and physical labels; codes instead of names.
+
+#### Privacy and Secrecy
+Secrecy - military, government, IP
+Privacy - protect information sensitive to an individual
+
+Need to Know (NTK) - access to private data based on business need to know.
+Restrict access to sensitive data.
+Ensure training of staff (clearance, review of access).
+
+#### Privacy Requirements
+Legal or Industry Standards (such as payment card industry - compliancy benchmarks).
+
+Hardware, Software, Storage, Display (reports and receipts), Communications.
+
+### Data Ownership
+Data owner - legally recognized, accountable for proper data protection; liable.
+Sets policy and approved procedures.
+
+Data classification roles:
+- Data Subject - such as customer
+- Data Custodian - possesses data at a point in time (takes phone call), not data owner
+- Data Processor
+- Data Controller - responsible for backups and protection
+- Data Protection Officer (DPO) - Under article 37 of GDPR is responsible for educating the company and its employees about compliance, training staff involved in data processing, and conducting regular security audits. Also serves as the point of contact between the company and any Supervisory Authorities (SAs) that oversee activities related to data.
+
+Data Lifecycle - Generation, Processing, Storage, Retention, Disposition (the right to be forgotten), Disposal.
+
+### Cross Border Data Requirements
+Most laws and regulations only protect data of their citizens. Different laws of different countries may not agree in all the cases.
+
+General laws (GDPR). Industry-specific laws (HIPAA).
+
+Even if an organization outsources the processing and storage of its data, the accountability for the protection of the data remains [primarily] with the data owner, not the processor.
+
+Treaties:
+- GDPR in Europe, and also many other countries GDPR-compliant
+- Safe Harbor, Privacy Shield - validation
+- GDPR-compliance: Binding Corporate Rules (BCP) and Standard Contractual Clauses (SCC)
+
+Cloud and Third Party worries:
+- Deletetion of data in the Cloud: bit splitting, crypto-erasure
+- Data Ownership: ownership and policies
+- Backups: disaster recovery - location and encryption
+- Test data for 3rd party
+- Intellectual property when code written by 3rd party - Jurisdiction (ownership of IP for outsourced functions, dispute resolution agreements, Non-disclosure Agreements NDA)
 
 ## Data and Software Protection Requirements
