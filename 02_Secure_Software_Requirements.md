@@ -169,3 +169,108 @@ Cloud and Third Party worries:
 - Intellectual property when code written by 3rd party - Jurisdiction (ownership of IP for outsourced functions, dispute resolution agreements, Non-disclosure Agreements NDA)
 
 ## Data and Software Protection Requirements
+Documentation benefits:
+- Baseline
+- Compliance measure
+- Consistency
+- Ensure items are not forgotten
+- Standardized documentation format
+- Requirements Traceability Matrix (RTM)
+  -- tracking
+  -- status
+
+Documentation: version control, ownership, access control.
+
+Software Protection:
+- Authentication (distribution, patches)
+- Digital Signatures
+- Shrink-wrap
+- Watermarks
+
+What to document:
+- Risk, Threat and Vulnerability Assessments
+- Assumptions
+- Reasons for choice of controls (considered alternatives)
+
+### Data Protection Controls
+Controls are selected to address risk:
+- Identify risk
+- Select most appropriate control
+
+Control Selection Criteria = Cost of control to implement, operate and maintain.
+Effects on performance, legal obligations, integration.
+
+Data Protection Controls - in all forms, in all places, at all times.
+Often done by encryption and deletion (crypto erasure = crypto shredding, defensible destruction).
+
+User Consent:
+- opt-in or opt-out (such as cookies)
+- right to be forgotten (erase or anonymize)
+- Privacy policy - always in place; what data is collected, why and what it is used for
+
+#### Data Retention
+Legal requirements (ability to retrieve), business needs, historical/cultural aspects.
+
+### Data Protection
+Anonymization:
+- Tokenization
+- Obfuscation
+- Randomization - irrecoverable
+- Pseudo-randomization - recoverable
+
+### Third Party Agreements
+Software development:
+- Ownership of source code
+- Escrow - if developer is unable to provide support then purcharser can obtain source code from a trusted party
+
+Support:
+- Software
+- Security
+
+Storage (cloud). Processing (cloud). Distaster recovery.
+
+Infrastructure security - suppliers should not be a single point of failure:
+- physical security (fire, access, power)
+- hardware disposal
+- transportation
+
+Legal considerations:
+- Jurisdiction (enforcement, dispute)
+- Protection of IP
+- Patents
+- Location of data
+- Clearance of staff
+
+Managed Security Service Providers
+- appoint Liaison
+- Non-disclosure agreements (NDAs)
+- clear communications channels
+- escalation procedures
+
+#### Contract and Statement of Work
+Well written contract often prevents misunderstandings and expensive changes.
+
+- Document all functionality and security requirements.
+- Define terms.
+- Set Key Performance Indicators (KPI) - hours of work, support staff.
+- Security - initially included Request for Proposal (RFP), addressed in RFP Response, included in Contract and actually delivered.
+- Compliance
+  -- such as PCI-DSS or PA-DSS for payment cards
+  -- Federal Information Security Management Act (FISMA) or other governmental compliance
+  -- ISO/IEC 27001 certification
+  -- Secure Development Lifecycle methodology
+  -- Certified staff
+- Use only secure components (tested and proven) - FIPS 140-2, FIPS 140-3
+
+#### Quality control
+Review products to ensure that they are delivered according to the document specifications.
+Warranty and ongoing support.
+
+#### Audit and Compliance
+- Right to audit (by me)
+- Third party audits (by trusted 3rd party) - SSAE 18, SSAE 20 standards
+  -- SOC 1 report - financial strength
+  -- SOC 2 report - operational report, how they are following policies and security procedures
+  -- SOC 3 report - high-level summary
+  -- Point-of-time - Type I audit
+  -- Period-of-time - Type II audit (for six months)
