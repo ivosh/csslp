@@ -152,9 +152,30 @@ Security requirements must be addressed and the chosen solutions documented. The
   * retention
   * access controls
 
+### Examine Architectural Risk Assessment
+Risk Assessment is often done by another team. They need to verify, examine the risk assessment report.
 
+Risk drives controls. Since risk is the justification for controls, an error in the risk assessment can result in the selection of incorrect controls.
 
+Information systems must be designed to operate securely within their real-life environments, not just in a sterile, perfect lab. Risk assessments are used to select appropriate controls and to deliver adequate security, so the risk assessment should be carefully reviewed to ensure it is reliable.
 
+Risk Assessment:
+* Scope (the same as the project)
+* Thorough
+* Realistci
+* Complete (all risk vectors examined)
+* Review assumptions
+* Operating Environment
+   * network connectivity
+   * network segmentation
+   * DMZ or other perimeter network
+   * shared database
+   * configuration (inexperienced installers)
+   * environmental issues (heat/freezing, dust, liquids. expertise of users)
+ * Integrated Operations
+   * Dependencies (job process flow, dependency on upstream inputs)
+   * Input validation (header and trailer records to ensure completeness of the input) 
+* Future Developments - Capacity to integrate security that is not currently required but may be necessary if the operating environment changes.
 
 
 
