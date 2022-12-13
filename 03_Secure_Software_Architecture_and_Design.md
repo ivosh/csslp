@@ -280,9 +280,85 @@ Web Services - protocols
  * REST (Representational State Transfer) - interoperability between web components
 
 
+### Web-based Architecture Risk
 
+Rich Internet Applications
+ * user interface on client side
+ * data manipulation on server side
+ * runs inside a web application, ideally in a sandbox
+   * isolation
+   * control
+   * virtualization
+   * restrictions
+ * risks: anything done at the client can be manipulated by the client
+   * input validation => fix the errors when they happen
+   * error handling
+   * execution on untrusted device
+   * remote (arbitrary) code execution: the ability of an attack to remotely access and take control of a victim's machine
+   * privilege escalation: attacker may seek to elevate the user's privileges
+   * continuos connectivity: makes devices valuable as part of a botnet or other malicious activity (cameras, TVs...)
 
+#### Pervasive Computing
+Ubiquitous computing - "every-ware". The use of computing technologies on all types of devices (home furnishings, cars, glasses...). The emerge of IoT.
 
+SCADA (Supervisory Control and Data Acquisition Systems) - ex: monitoring and controling of water and power distribution. In the past connectivity ensured by leased dedicated lines.
 
+Industrial Control Systems (ICS) - ex: building management systems (air conditioning connected to public internet and building management system as well)
 
+Risks:
+  * difficulty of patching (long lifespan...)
+  * vulnerabilities (Stuxnet worm)
+  * IoT - lack of separation between network and functional components (ex: medical devices => restart in the middle of the operation; vehicles - ex: breaks and radio)
+  * Wireless communications may be intercepted and modified (=> confidentiality and integrity)
+  * Wireless communication may be jammed (=> availability for remote access/administration)
+ 
+The integration of computing devices into everyday devices and processes has created an entirely new risk landscape.
+Wireless communications remain a 'soft' target for many attacks.
+ 
+#### Feature-based Risk
+Very often the addition of extra features to an application or an service has resulted in new compromises or breaches (new attack vectors).
+New feature has not been assessed.
+Risk:
+  * system compromise
+  * data disclosure
 
+Examples:
+  * Location-based services (ex: advertising, local attractions, coupons, marketing, tracks employees and company-owned vehicles). Privacy issue: disclose data on user locations and habits.
+  * Radio Frequency Identifiers (RFID)
+    * track products, devices and people
+    * store entity-related data (RFID tag on clothing)
+    * ease of use - installation and removal
+    * avoid loss of, or interchanged cards (when used for tracking)
+  * Near Field Communications (NFC)
+    * Wireless, contactless communications between devices in close proximity to another (ex: exchange of files, payment systems)
+    * risk: theft of payment data, unknown copying of data from a device
+  * Embedded systems
+    * Computing process built into a product (ex: automobile)
+    * Usually performs a set function
+    * Real-time computing (changing road conditions)
+    * risk: difficult to patch, long lifespan, remote access
+    * Microcontrollers (single purpose computation) ex: embedded medical devices (pacemaker), automotive; ruggedized for environment
+  * Firmware - embedded onto ROM or flash
+    * may be infected during the manufacturing process
+    * need assurance of reputable vendors
+  * Field Programmable Gate Arrays (FPGA)
+    * may lose configuration if power failure
+  * Hardware Platforms
+    * Hardware Security Module (HSM)
+    * Trusted Platform Module (TPM)
+    * side-channel attacks (Spectre, Meltdown - speculative execution) leading to bypass account permissions and memory regions
+    * firmware and software updates
+
+#### Trusted Components
+Common Criteria
+ * Target of Evaluation (ToE)
+ * Protection Profile
+ * Security Target (security objective), defined by the vendor
+ * Security functional requirements, described by the vendor
+ * Evaluated assurance level (EAL), nowadays obsolete
+
+#### Cognitive Computing
+Mimics human reasoning, based on AI and ML.
+  * Signal processing (self-driving cars)
+  * Used in control systems. Ex: industrial machinery and operations, automobiles, medical devices, building management systems (HVAC)
+  * Risk: incorrect or incomplete input data leads to incorrect result (ex: medical analysis, self-driving vehicles)
