@@ -180,3 +180,109 @@ Risk Assessment:
 
 
 ## Design Software Security Architecture
+
+Security Architecture is concerned with the implementation of controls to protect the operation of a system or buseness process and maintain confidentiality, integrity and availability.
+
+Security Controls:
+* Proactive (safeguards) - protect an asset from damage
+* Reactive (countermeasures) - counter or respond to an incident
+
+Types of controls (we need all the three following types):
+* managerial or administrative
+* technical / logical
+* physical / environmental (operational)
+* compensating = additional control to compensate for or address a weakness or lack of other controls (ex: administrator rights on a system => dual control)
+
+Security Controls:
+* Directive (ex: policy - safeguard)
+* Deterrent (ex: CCTV - safeguard)
+* Preventive (ex: password - safeguard)
+* Detective (ex: audit - contermeasure)
+* Corrective (ex: fire extinguisher - countermeasure)
+* Restoration/recovery (ex: - countermeasure)
+
+### Adequate Security
+Security that is commensurate with a risk. Risk can be accepted only by the risk owner (in most cases the asset owner).
+Demands and requirements placed on the security IT by the business (risk owner).
+Adequate security must be:
+ * effective
+ * cost-effective
+ * justifiable
+ * aligned with business needs (goal: secure the business, not the system)
+
+### Security Control Identification and Prioritization
+List all security controls:
+ * prioritization based on cost, other projects, technology
+ * placement of controls (deployment)
+
+Statement of Work - control requirements
+ * Deliverable
+ * Operation
+ * Testing
+ * Documentation
+
+### Architecture Based Controls
+Architectural Choices - the best solution depends on many factors. Understand the business.
+The choice of architecture is often based on preference as all architectures have advantages and disadvantages.
+
+Centralized computing:
+ * one point of control (power, management) - also cloud today
+ * one point of failure
+ * consistency in processes and security
+ * inflexibility
+
+Decentralized computing:
+ * flexible to business needs
+ * less reliance on network connectivity
+ * tailored solutions
+ * local knowledge
+ * inconsistency in processes and security
+ * possible duplication of data
+ * non-standard applications and tools
+ * shadow IT
+ * lack of local expertise
+ * not suitable especially for small offices
+
+Decentralized Security Risk:
+ * consistency in access controls
+ * legal compliance
+ * monitoring
+ * log collecting and deletion
+
+Client Server Architecture
+ * originally two-tiered architecture
+ * central data storage
+ * dependent on network connectivity
+
+Peer to Peer (P2P) Architecture
+ * Robust multi-point services
+ * Each node may operate as a client and as a server - all nodes may be peers
+ * Data replication is a challenge for consistency
+ * Grater risk of remote access vulnerabilities 
+
+Message Queuing
+ * Synchronous and asynchronous messaging
+ * Risk of insertion of bad code
+
+Service Oriented Architecture (SOA)
+ * Loose coupling of service available on demand
+ * Instead of tight coupling based on pre-defined sequence
+ * Provides interface for utilizing (reuse of) existing services (a highway for service functions) => Enterprise Security Bus (ESB)
+ * Integration of separately deployed and maintained software components
+ * Risk: interoperability and security of protocols
+
+Web Services - protocols
+ * UDDI (Universal Description, Discovery and Integration) - directory of available services
+ * XML (eXtended Markup Language) - format of data and metadata
+ * SOAP (Simple Object Access Protocol) - mechanism to transport data
+ * WSDL (Web Service Definition Language) - available services
+ * ESB (Enterprise Security Bus) - commonucations path between applications
+ * REST (Representational State Transfer) - interoperability between web components
+
+
+
+
+
+
+
+
