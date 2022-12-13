@@ -362,3 +362,40 @@ Mimics human reasoning, based on AI and ML.
   * Signal processing (self-driving cars)
   * Used in control systems. Ex: industrial machinery and operations, automobiles, medical devices, building management systems (HVAC)
   * Risk: incorrect or incomplete input data leads to incorrect result (ex: medical analysis, self-driving vehicles)
+
+### The Cloud
+"Cloud-first" strategy. But there is no 'one' cloud - there are many different implementations, each with their own security challenges.
+
+"Cloud computing" is a model for enabling ubiquitous convenient, on-demand network access to a shared pool of configurable computing resources (ex: networks, computing, storage, applications, services) then can be rapidly provisiond and released with minimal management effort or service provider interaction. [NIST SP800-145]
+
+Essential characteristics:
+  * on-deman self-service
+  * broad network access
+  * resource pooling
+  * rapid elasticity
+  * measured service (pay for what we use)
+
+Cloud implementations:
+  * software as a service (SaaS)
+  * platform as a service (PaaS)
+  * infrastructure as a service (IaaS)
+
+Cloud implementations:
+  * public cloud
+  * private cloud (on-premises or remote)
+  * community cloud (universities, government...)
+  * hybrid cloud
+
+Migration to the cloud:
+  * move from CapEx (capital expenditure) to OpEx (operational expenditure); especially related to spikes in usage
+  * availability of skilled staff
+  * time to delivery
+  * scalability
+  * virtualization (=> flexibility and isolation)
+  * reduced risk (backups, compliance, disaster recovery)
+
+Advantages:
+  * everyone works from the same software
+  * patch management
+  * efficiency
+  * 
