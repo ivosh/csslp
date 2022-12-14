@@ -368,6 +368,8 @@ Mimics human reasoning, based on AI and ML.
 
 "Cloud computing" is a model for enabling ubiquitous convenient, on-demand network access to a shared pool of configurable computing resources (ex: networks, computing, storage, applications, services) then can be rapidly provisiond and released with minimal management effort or service provider interaction. [NIST SP800-145]
 
+The cloud is an excellent architecture for many organizations. Each cloud solution has unique security concerns. Security requirements must be included in contracts and service level agreements.
+
 Essential characteristics:
   * on-deman self-service
   * broad network access
@@ -398,4 +400,17 @@ Advantages:
   * everyone works from the same software
   * patch management
   * efficiency
-  * 
+  * environmental footprint (HVAC, power plant, backup power...)
+  * centralized administration
+  * cheaper end-point equipment (economies of scale)
+
+Risks:
+  * cloud provider failure
+  * cross-border data laws (GDPR)
+  * loss of direct control over data
+  * encryption keys
+  * retired equipment => policies and procedures on secure destruction
+  * leaving the cloud (data format, data volume, portability)
+
+
+
