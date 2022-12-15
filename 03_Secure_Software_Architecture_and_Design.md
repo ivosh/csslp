@@ -1,7 +1,7 @@
 # 3. Secure Software Architecture and Design
 
 Software must be designed with the understanding that it WILL be attacked.
-The software designed should be familiar with the various attack vectors and common threats to software.
+The software designed should be familiar with the various vectors and common threats to software.
 
 ## Categorize Threats to Software Applications
 
@@ -469,8 +469,47 @@ Networking enables collaboration and sharing but also rasis the risk:
 
 *Trusted Path* is a strictly controlled interface, such as security and management interfaces used to monitor and perform administrative functions. Access must be designed into the solution, including audit/inspection hooks.
 
+*Out of band* communication is a communication on a different band or channel than the one normal one. Required for monitoring, sensitive data, to prevent traffic analysis, to ensure confidentialy and integrity. Out of band could be set up on an alternate channel, via manual process, via encryption keys (DH, ECDH), negotiations.
+
+Secure communications between systems requires:
+ * Establishing trust between the parties
+ * The exchange of keys to support encryption
+
+#### Encryption Key Exchange
+ * Diffie-Hellman key negotiation
+ * RSA and ECC certificates
+ * Internet Protocol Security (IPSec) - uses security association to establish secure communication
+
 #### Protocols
+Protocol = an agreed-on format for communication. Various protocol for various purposes (TCP, UDP, RTP - packet loss concealment, jitter).
+
 Secure remote access. Protection from unauthorized access or configuration.
+
+Consistency of data format: conversion to common language or encoding, error codes, file layouts, field definitions.
+
+State = the condition an entity is in at a point in time. State can change. State needs to stay secure (communication between two secure systems must be over secured interface): policy and preservation of state.
+
+Protocol choice:
+  * resistant to data manipulation
+  * encryption to protect data
+  * entity authentication
+
+Weak protocols these days which should be prohibited by policies and standards:
+  * SSL
+  * TSL v1.1
+  * POP3
+  * MD5
+  * SHA1
+  * SNMP v1 and v2c
+
+*Application Program Interface* (APIs) are software building blocks (routines, protocols, tools) used as interfaces between various software components (ex: embed a map feature into a website). APIs enable developers to easily and quickly build code with incredible functionality.
+The risks are:
+  * false APIs
+  * APIs using older code or weak encryption
+  * false certificates
+  * changes to functionality
+  * insecure endpoints
+
 
 #### Log Management
 Logs shall be protected as they may contain sensitive information. They are required for legal compliance and management. Integrity may be required for legal issues and investigations (forensics), such as via Write-once Read-Many system, hashing, encryption.
@@ -523,3 +562,68 @@ Managing a Network Channel:
   * Defined process for disconnecting (do not leave half-open connection)
   * Encryption (for access control, authentication, confidentiality, proof of origin). Challenge is key management.
 
+
+
+## Design and Evaluate Software Security Architecture
+
+Concepts:
+  * Build security into every component of the system: OS, utilities, networks, databases, middleware, applications, endpoints, interfaces
+  * Mature design process in the organization: enterprise-wide. Choose one methodology and apply it consistently with continuous improvement.
+  * System's design must address the requirements for security and efficient functionality and security.
+  * Good practices include designing solutons that will reduct project problems and leverage known solutions.
+ 
+Benefits of secure design:
+  * control effectiveness
+  * reduced costs for controls
+  * better alignment with business and security needs (instead of hindering operations)
+  * preparation and planning leads to fewer errors or re-work
+
+Reusable Secure Design:
+  * Many security solutions are already available for use by the systems and security architects
+  * Prevents introducing new errors
+  * Already proven technology and solutions
+  * More supportive of audit
+  * Based on commonly accepted practices
+ 
+ Control Selection
+   * Influenced by sensitivity and criticality (~ availability) of data
+   * Influenced by sensitivity and criticality of system
+   * Controls may be based on common standards and templates (NIST, PCI-DSS, COBIT)
+   * Controls may be tailored to address unique requirements for each system
+
+Design Documentation
+  * in a consistent format across the organization
+    * easier to maintain (version control)
+    * easier to reference and read
+    * easier to share with other integrated systems
+  * should be kept up-to-date (as-designed vs as-built => update the documentation)
+  * kept under version control
+  * readily accessible
+
+ 
+### Operating System Security
+ * Isolation between security kernel and other less important functions - ring protection (layers)
+ * Patching
+ * Choice of Operating System: reliability, open source vs proprietary
+ * Utilities - restrictions on access to privileged utilities
+ * Use of trusted products (fake drivers, utilities, processes with back doors and compromises) => signed
+
+### Network Security
+ * Isolation (microsegmentation, VLANs, DMZ, Extranet...)
+ * Layered Network Defense
+   * avoid single points of failure (firewall, administrator) or compromise (wireless router)
+   * proxies
+   * firewalls
+   * WAFs
+   * IDS/IPS
+   * redundancy
+
+### Power and Environmental Controls
+  * Uninterruptible Power Supply (UPS) - batteries, generators
+  * Surge protectors
+  * Heating, Ventilation and Air Conditioning (HVAC) - capacity
+    * Humidity and temperature sensors - rapid changes can cause corrosion or electrostatic shock
+  * Rack space
+  * Physical access controls (data center)
+
+### Credential Management
