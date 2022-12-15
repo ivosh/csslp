@@ -627,3 +627,49 @@ Design Documentation
   * Physical access controls (data center)
 
 ### Credential Management
+X.509 v3 certificates
+  * links public key to its owner
+  * issued by a Certificate Authority (CA)
+  * Registration Authority (RA) acceptes the CSRs
+  * types: key usage
+  * certificate validity (lifespan)
+  * revocation
+  * Public Key Infrastructure (PKI)
+     * deployment of assymetric key cryptography in a usable mode
+     * uses certificates to validate parties
+     * Certificate Revocation Lists (CRLs) - identify certificates that are no longer trusted
+
+Single Sign-On (SSO)
+  * Clients interface correctly to the centralized access system (IAM)
+
+Secure Design Elements
+  * menus offer only actionable items
+  * verification
+  * level of trust
+  * operating system adequately secured
+  * audit (logs)
+  * permissions set up correctly
+
+### Data Protection
+Data Loss Prevention (DLP) - prevents the leakage of data internally and out of the organization. Built into systems to detect instances where sensitive data is stored or transmitted properly (often into firewalls).
+
+DLP Systems:
+  * keywords
+  * classification
+  * encryption challenges (data is encrypted)
+  * steganography (hiding data inside a picture or video)
+
+Secure Virtualization
+  * Software defined infrastructure (middleware, containers, virtualization)
+  * Under version control system
+  * Type-I (hw, HV on on the hw)
+  * Type-II (hw, host OS, HV on top)
+  * Hypervisor is an additional attack surface
+
+Trusted Computing
+  * Trusted Platform Module (TPM)
+  * Attested Boot (Secure Boot)
+  * Trusted Computing Base (TCB) - define area of responsibility for user, administrator...
+  * Trusted Path - secure way to administer a device
+
+### Database Security
