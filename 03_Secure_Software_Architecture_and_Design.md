@@ -183,6 +183,8 @@ Risk Assessment:
 
 Security Architecture is concerned with the implementation of controls to protect the operation of a system or buseness process and maintain confidentiality, integrity and availability.
 
+There are many different architectural models used to implement software. Each model has advantages and disadvantages, and the risks must be identified and addressed.
+
 Security Controls:
 * Proactive (safeguards) - protect an asset from damage
 * Reactive (countermeasures) - counter or respond to an incident
@@ -412,5 +414,112 @@ Risks:
   * retired equipment => policies and procedures on secure destruction
   * leaving the cloud (data format, data volume, portability)
 
+#### Mobile Applications
+Applications designed to operate on mobile devices (smartphones, tablets...). The risk associated with mobile applications starts with the platform itself - as software designers we often have no control over the security of the device (=> build the app which is secure itself).
 
+Mobile applications make the internet much more usable for everyone. Risks must be identified and mitigated.
+
+Mobile Top 10 from OWASP
+ * Improper Platform Usage: misuse of: TouchID, permissions, keychain
+ * Insecure Data Storage: insecure data storage and leakage
+ * Insecure Communication: poor handshaking, incorrect TLS/SSL versions, cleartext
+ * Insecure Authentication: failure to identify user, weak session management
+ * Insufficient Cryptography: poor implementation (weak, old)
+ * Insecure Authorization: authorization decisions on client side
+ * Client Code Quality: buffer overflow, format string vulnerabilities
+ * Code Tampering: binary patching, memory modification
+ * Reverse Engineering: analysis of core binary
+ * Extraneous Functionality: hidden backdoors, breach internal security controls
+
+Mobile Code Vulnerabilities [NDIS SP800-28 Rev2]
+ * Active content (triggered automatically): pdf documents, java applets, ActiveX controls, Word macros, Flash and Shockwave media files
+ * Untrusted software
+ * Remote execution (ex: games have backdoors)
+ * Unstructured and unverified content
+
+Mobile Risk Safeguards:
+ * Policies
+ * Evaluated technology (use CYOD instead of BYOD)
+ * Security audit
+ * Version control and patch management
+ * Isolation (sandbox)
+ * Minimum functionality
+
+Technical controls:
+ * Filters (firewalls)
+ * Sandboxing
+ * Signatures of trusted source
+ * Proofs of code properties (source code has not been altered)
+
+
+## Design Secure Interfaces
+
+### Interfaces
+Interfaces have become an important attack vector against software components and modules.
+
+Systen interfaces provide many benefits and numerous risks to the security of the application and its data.
+Security of the network interfaces needs to be designed into the application.
+
+Networking enables collaboration and sharing but also rasis the risk:
+  * Interception and manipulation of data, including exposure of sensitive information
+  * Loss of availability of critical data
+  * Sharing and spread of malware
+
+*Chained exploits* happen when a system is compromised and used as a foothold for attacking other networked systems.
+
+*Trusted Path* is a strictly controlled interface, such as security and management interfaces used to monitor and perform administrative functions. Access must be designed into the solution, including audit/inspection hooks.
+
+#### Protocols
+Secure remote access. Protection from unauthorized access or configuration.
+
+#### Log Management
+Logs shall be protected as they may contain sensitive information. They are required for legal compliance and management. Integrity may be required for legal issues and investigations (forensics), such as via Write-once Read-Many system, hashing, encryption.
+
+Differentiate debug and audit messages. Non-verbose error messages, especially if they are returned to the client.
+
+Log critical events - who, what, when.
+
+#### Dependencies
+
+Network of systems provides many advantages and introduces new risks: result of bad input (upstream liability) and result of bad output (downstream liability).
+
+Communication channels should be monitored and managed.
+
+Interface layers:
+  * network
+  * utilities
+  * middleware
+  * sub-processes
+  * users
+
+Upstream Liabilities (my system depends on an upstream system which sends me data):
+  * invalid input
+  * duplicated data
+  * incomplete data
+  * => input validation (allowable values, range of values, completeness of input)
+  * => integrity (hash, sequence numbers)
+  * => confidentiality (encryption, anonymization)
+  * => secure access controls, especially for remote access
+
+Downstream Liability (my system sends data to a downstream system):
+  * infect other systems
+  * unauthorized data sharing (DRM)
+
+Interface Connectivity:
+  * Bluetooth
+  * RFID
+  * NFC
+  * 802.11
+
+Interface Communication Risks:
+  * Loss of connectivity
+  * Unauthorized access
+  * Accuracy of data (noise)
+  * Jamming (interference)
+
+Managing a Network Channel:
+  * Procedures for approval for establishing the connection (CoC)
+  * Process to monitor the channel and report on any problems
+  * Defined process for disconnecting (do not leave half-open connection)
+  * Encryption (for access control, authentication, confidentiality, proof of origin). Challenge is key management.
 
